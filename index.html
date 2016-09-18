@@ -1,11 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        
-        <meta charset="utf-8">
-        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio for nnsnodnb</title>
+        <link rel="stylesheet" type="text/css" href="venders/fullPage/css/jquery.fullPage.css">
+        <link rel="stylesheet" type="text/css" href="venders/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/application.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!--[if IE]>
+        <script type="text/javascript">
+            var console = { log: function() {} };
+        </script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="venders/fullPage/js/jquery.easings.min.js"></script>
+        <script type="text/javascript" src="venders/fullPage/js/jquery.fullPage.min.js"></script>
+        <script type="text/javascript" src="venders/fullPage/js/scrolloverflow.min.js"></script>
+        <script type="text/javascript" src="venders/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    anchors: ['firstPage', 'secondPage', 'thirdPage'],
+                    sectionsColor: ['#8CFFA9', '#7DC9E5', '#F9B26A'],
+                    slidesNavigation: true,
+                });
+            });
+        </script>
     </head>
-    <body>
+    <body class="no-thank-yu">
+        <header>
+            <div class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="#firstPage" class="navbar-brand"><img src="image/logo.png" id="logo-image"></a>
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar-main">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="first"><a href="#firstPage">About me</a></li>
+                            <li class="dropdown" id="second">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Product <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#secondPage/">Product 1</a></li>
+                                    <li><a href="#secondPage/1">Product 2</a></li>
+                                    <li><a href="#secondPage/2">Product 3</a></li>
+                                    <li><a href="#secondPage/3">Product 4</a></li>
+                                    <li><a href="#secondPage/4">Product 5</a></li>
+                                    <li><a href="#secondPage/5">Product 6</a></li>
+                                </ul>
+                            </li>
+                            <li id="third"><a href="#thirdPage">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="fullpage">
+            <div class="section" id="section0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>First</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section1">
+                <div class="slide" id="slide1">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Product 1</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Product 2</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Product 3</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Product 4</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Product 5</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide" id="slide6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <h1>Product 6</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="section2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h1>Third</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </body>
 </html>
