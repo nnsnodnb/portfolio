@@ -1,8 +1,6 @@
 deploy:
 	@ python -m venv venv
-	@ source ./venv/bin/activate
-	@ pip install fabric3
-	@ fab deploy
-	@ pip uninstall -y fabric
-	@ deactivate
+	@ ./venv/bin/pip install fabric3
+	@ ./venv/bin/fab deploy
+	@ ./venv/bin/pip uninstall -y fabric3
 	@ rm -rf venv
