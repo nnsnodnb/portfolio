@@ -5,6 +5,10 @@
       {
         "appID": "99649YXF6E.moe.nnsnodnb.NowPlaying",
         "paths": ["/nowplaying/*"]
+      },
+      {
+        "appID": "99649YXF6E.moe.nnsnodnb.UniversalLinksDemo",
+        "paths": ["/universallinksdemo/*"]
       }
     ]
   }
