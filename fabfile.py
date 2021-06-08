@@ -11,4 +11,4 @@ def deploy():
     BASE_DIR = '/var/www/portfolio/'
     
     with cd(BASE_DIR):
-        run('git pull origin master')
+        run("eval `ssh-agent` && ssh-add ~/.ssh/id_ecdsa_github && git pull origin master")
