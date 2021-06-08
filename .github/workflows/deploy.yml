@@ -1,0 +1,42 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        pip install -U pip
+        pip install -r requirements.txt
+
+    - name: Setup ~/.ssh/config
+      run: |
+        cat << "EOF" > ~/.ssh/config
+        ${{ secrets.SSH_CONFIG }}
+        EOF
+        chmod 644 ~/.ssh/config
+
+    - name: Setup private key
+      run: |
+        cat << "EOF" > ~/.ssh/private_key
+        ${{ secrets.PRIVATE_KEY }}
+        EOF
+        chmod 600 ~/.ssh/private_key
+        ssh-add ~/.ssh/private_key
+
+    - name: Deployment
+      run: |
+        fabric deploy
