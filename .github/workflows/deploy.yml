@@ -47,6 +47,7 @@ jobs:
         ${{ secrets.PRIVATE_KEY }}
         EOF
         chmod 600 ~/.ssh/private_key
+        eval `ssh-agent`
         ssh-add ~/.ssh/private_key
 
     - name: Deployment
